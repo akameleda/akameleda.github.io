@@ -10,6 +10,5 @@ alert("Wow, the movie " + favoriteMovie + "Is so cool!")
 var favoriteBook = prompt("what's your favorite book. i just really like The Dragon with a chocolate heart and The Land of stories! they are really good!")
 alert("wow! that book sounds so cool. i should read it")
 alert("uh-oh! i am sorry but i have to go! i have to go to work.")
-alert("bye! it was soo nice to meet you all"
-)
+alert("bye! it was soo nice to meet you all")
 
