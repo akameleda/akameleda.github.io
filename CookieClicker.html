@@ -18,6 +18,10 @@ background-color: lightgreen;
     <button id = "gameReset" onclick = "reset()" >
     Reset Game
     </button>
+<button id = "auto" onclick = auto()>
+Automatically collect cookies
+</button>
+  
   </body>
   <script>
     var clicks = 0
@@ -29,6 +33,13 @@ counter.innerHTML = clicks;
     function reset() {
     clicks = 0;
     counter.innerHTML = clicks
+    }
+    function auto() {
+    for {  clicks = clicks +1 
+       setTimeout(myFunction, 1000)
+        }
+    }
+    function myFunction(){
     }
   </script>
 <style>
