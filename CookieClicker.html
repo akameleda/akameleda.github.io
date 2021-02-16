@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { 
+background-color: lightgreen;
+}
+</style>
+</head>
+  <body>
+    <h1>
+      Cookie Clicker!
+    </h1>
+    <img src="cookieClicker.png" id="cookie image" onclick = increment()>
+    <p>
+      Cookies Clicked: <span id="counter">0</span>
+    </p>
+    <button id = "gameReset" onclick = "reset()" >
+    Reset Game
+    </button>
+  </body>
+  <script>
+    var clicks = 0
+
+    function increment() {
+clicks = clicks + 1;
+counter.innerHTML = clicks;
+    }
+    function reset() {
+    clicks = 0;
+    counter.innerHTML = clicks
+    }
+  </script>
+<style>
+body{
+  color: magenta
+}
+#counter{
+  color:blue
+}
+#gameReset{
+  color: orange
+}
+</style>
+</html>
