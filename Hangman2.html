@@ -32,6 +32,22 @@ while (RemainingLetters > 0) {
 }
  function SubmitEntry(){
  var guess =  document.getElementById('MyEntry').value
+ var RemainingLetters = word.length;
+while (RemainingLetters > 0) {
+  alert(AnswerArray.join(" "));
+  if (guess === null) {
+  break;
+  } else if (guess.length !== 1) {
+    alert("please answer with a single letter.");
+  } else {
+    for (var J = 0; J < word.length; J++) {
+      if (word[J] === guess) {
+        AnswerArray[J] = guess;
+        RemainingLetters--;
+      }
+    }
+  }
+}
 } 
 alert(AnswerArray.join(" "));
 alert("Congrats! The word  was " + word);
