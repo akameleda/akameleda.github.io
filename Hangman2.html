@@ -17,9 +17,6 @@ for (var i = 0; i < word.length; i++) {
 var RemainingLetters = word.length;
 while (RemainingLetters > 0) {
   alert(AnswerArray.join(" "));
-function SubmitEntry(){
- var guess =  document.getElementById('MyEntry').value
-} 
   if (guess === null) {
   break;
   } else if (guess.length !== 1) {
@@ -33,6 +30,9 @@ function SubmitEntry(){
     }
   }
 }
+ function SubmitEntry(){
+ var guess =  document.getElementById('MyEntry').value
+} 
 alert(AnswerArray.join(" "));
 alert("Congrats! The word  was " + word);
 alert("goodbye" + name)
