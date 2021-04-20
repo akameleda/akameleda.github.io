@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <i>Guessing Letter Game By Adele Makaranka</i>
+    <em>Guessing Letter Game By Adele Makaranka</em>
     <br>
     <button onclick=StartGame()>Click me to start a new game!</button>
+    <style>
+      em {
+  font-size: 30px;
+}
+    </style>
   </head>
-  <body>
+  <body>    
     <script> 
       function StartGame(){
        var NumberYouNeedToGuess = (96 + (Math.floor(Math.random() * 26) + 1))
