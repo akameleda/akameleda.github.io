@@ -29,7 +29,7 @@ function BeginNewGame(){
     
     if (correctAnswer == 3) { 
         alert("Good job!")
-       Math.Floor(Math.Random()) 
+       changeBackground() 
     } else if (correctAnswer == 2 ){
     alert("You only got some questions correct that time, but try again! You'll get them next time.");
     } else if (correctAnswer == 1) {
@@ -37,6 +37,13 @@ function BeginNewGame(){
     } else if (correctAnswer == 0) {
         alert("Sadly you didn't get any questions right this time. But keep practicing! Practice makes perfect. ")
     }
+}
+    
+function changeBackground(){
+document.body.style.backgroundColor=
+'rgb(' + Math.round(Math.random()*255) +
+',' + Math.round(Math.random()*255) +
+',' + Math.round(Math.random()*255) +')';
 }
 </script>
 
