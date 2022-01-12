@@ -4,9 +4,8 @@
 <script>
 
 function BeginNewGame(){ 
-    
+    var correctAnswer = 0
     for (i = 0; i < 3; i++){
-
         
         var num1 = Math.floor(Math.random()*12)+1;
         var num2 = Math.floor(Math.random()*12)+1;
@@ -20,13 +19,25 @@ function BeginNewGame(){
 
         var answer = num1*num2;
         if (yourAnswer == answer) {
-            alert("Correct!! Your answer was " + yourAnswer)
+            alert("Correct!! Your answer was " + yourAnswer) 
+            correctAnswer = correctAnswer+1;
         } else {
-            alert("That was incorrect, But don't worry! You'll get it right next time. Your answer was " + yourAnswer)
+            alert("That was incorrect, But don't worry! You'll get it right next time. Your answer was " + yourAnswer);
         }
     }
+    alert("You got "  + correctAnswer + " out of 3 questions right."); 
+    
+    if (correctAnswer == 3) { 
+        alert("Good job!")
+       Math.Floor(Math.Random()) 
+    } else if (correctAnswer == 2 ){
+    alert("You only got some questions correct that time, but try again! You'll get them next time.");
+    } else if (correctAnswer == 1) {
+        alert("Even though you only got one question right, Try again! You'll get them all next time.")
+    } else if (correctAnswer == 0) {
+        alert("Sadly you didn't get any questions right this time. But keep practicing! Practice makes perfect. ")
+    }
 }
-
 </script>
 
 <p align="Center">
