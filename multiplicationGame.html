@@ -1,0 +1,44 @@
+<html>
+<title>Multiplication Picture Game!</title>
+<h3>Hello! :) Welcome to the multiplication memorization game. Every time you play the game, It will ask you 3 random questions on the screen. If you solve them all correct, !</h3>
+<script>
+
+function BeginNewGame(){ 
+    
+    for (i = 0; i < 3; i++){
+
+        
+        var num1 = Math.floor(Math.random()*12)+1;
+        var num2 = Math.floor(Math.random()*12)+1;
+    
+        var yourAnswer = prompt("What is " + num1 + " x " + num2 + "?");
+
+        if (yourAnswer == null) {
+            alert("Thank you for playing the game, Goodbye!");
+            return;
+        }
+
+        var answer = num1*num2;
+        if (yourAnswer == answer) {
+            alert("Correct!! Your answer was " + yourAnswer)
+        } else {
+            alert("That was incorrect, But don't worry! You'll get it right next time. Your answer was " + yourAnswer)
+        }
+    }
+}
+
+</script>
+
+<p align="Center">
+        <button   class="StartNewGame" onclick="BeginNewGame()">Start New Game</button>
+    <br><br><br>
+</p>
+<style> 
+.StartNewGame {
+    border-radius: 10px;
+   font-family: "Courier New";
+}
+
+</style>
+ <h5>Thank you to w3schools, Many of their online tutorials helped me code this. </h5>
+</html>
