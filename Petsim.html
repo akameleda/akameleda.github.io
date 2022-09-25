@@ -18,11 +18,10 @@
 var PetName = prompt("What would you like to name your pet?")
 var Weight = Math.floor(Math.random() * 13 + 1);
 var Age = 0
-var FoodLevel = 100
-var SleepLevel=100
-var HappinessLevel=100
+var FoodLevel = 50
+var SleepLevel=50
+var HappinessLevel=50
 var i = 0
-
 function AgeUp(){
 Age++
 Weight++
@@ -30,34 +29,51 @@ document.getElementById("age").innerHTML="Age: " + Age
 document.getElementById("excercise").innerHTML="Weight: " + Weight
 }
 function Sleep(){
+    if(SleepLevel<100){
     SleepLevel++
     document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel
+    }
 }
 function Feed(){
+    if(FoodLevel<100){
     FoodLevel++
     Weight++
     document.getElementById("food").innerHTML="Food Level: " + FoodLevel
     document.getElementById("excercise").innerHTML="Weight: " + Weight
+    }
 }
 function Play(){
+    if(HappinessLevel<100){
    HappinessLevel++
    document.getElementById("play").innerHTML="Happiness: " + HappinessLevel
+    }
 }
 function Excercise(){
+    if(Weight>1){
     Weight--
     document.getElementById("excercise").innerHTML="Weight: " + Weight
+    }
 }
-
-function MinusNeeds(){
-   Weight--
+setInterval(function(){ 
+    if(Weight>1){
+    Weight--
+    }
+    if(FoodLevel>1){
    FoodLevel--
+    }
+    if(SleepLevel>1){
    SleepLevel--
+    }
+    if(HappinessLevel>1){
    HappinessLevel--
+    }
    document.getElementById("excercise").innerHTML="Weight: " + Weight
    document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel
    document.getElementById("food").innerHTML="Food Level: " + FoodLevel
    document.getElementById("play").innerHTML="Happiness: " + HappinessLevel
-}
+    
+}, 5000);
+
 document.getElementById("name").innerHTML="Name: " + PetName
 </script>
 <style>
