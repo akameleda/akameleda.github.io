@@ -25,8 +25,8 @@ var i = 0
 function AgeUp(){
 Age++
 Weight++
-document.getElementById("age").innerHTML="Age: " + Age + "years"
-document.getElementById("excercise").innerHTML="Weight: " + Weight  + "lbs"
+document.getElementById("age").innerHTML="Age: " + Age + " year(s)"
+document.getElementById("excercise").innerHTML="Weight: " + Weight  + " lbs"
 }
 function Sleep(){
     if(SleepLevel<100){
@@ -39,7 +39,7 @@ function Feed(){
     FoodLevel++
     Weight++
     document.getElementById("food").innerHTML="Food Level: " + FoodLevel + "%"
-    document.getElementById("excercise").innerHTML="Weight: " + Weight + "lbs"
+    document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
     }
 }
 function Play(){
@@ -51,7 +51,7 @@ function Play(){
 function Excercise(){
     if(Weight>1){
     Weight--
-    document.getElementById("excercise").innerHTML="Weight: " + Weight + "lbs"
+    document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
     }
 }
 setInterval(function(){ 
@@ -67,7 +67,7 @@ setInterval(function(){
     if(HappinessLevel>1){
    HappinessLevel--
     }
-   document.getElementById("excercise").innerHTML="Weight: " + Weight + "lbs"
+   document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
    document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel + "%"
    document.getElementById("food").innerHTML="Food Level: " + FoodLevel + "%"
    document.getElementById("play").innerHTML="Happiness: " + HappinessLevel + "%"
