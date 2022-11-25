@@ -1,164 +1,169 @@
 <Html>
-<Body style="background-image: url('adeletreecoding.jpg');">
-<button class="Button" onclick="Feed()">Feed</button>
-<button class="Button1" onclick="Sleep()">Sleep</button>
-<button class="Button2" onclick="Play()">Play</button>
-<button class="Button3" onclick="Excercise()">Excercise</button>
-<button class="Button4" onclick="AgeUp()">Age Up</button>
-<button class="Button5">Rename</button>
-<p class="Text"id="food"> Food:</p>
-<p class="Text"id="sleep">Sleep:</p>
-<p class="Text"id="play">Happiness:</p>
-<p class="Text"id="excercise">Weight:</p>
-<p class="Text"id="age">Age:</p>
-<p class="bigText" id="name">Name:</p>
-</Body>
-</Html>
-<script>
-var PetName = prompt("What would you like to name your pet?")
-var Weight = Math.floor(Math.random() * 13 + 1);
-var Age = 0
-var FoodLevel = 50
-var SleepLevel=50
-var HappinessLevel=50
-var i = 0
-function AgeUp(){
-Age++
-Weight++
-document.getElementById("age").innerHTML="Age: " + Age + " year(s)"
-document.getElementById("excercise").innerHTML="Weight: " + Weight  + " lbs"
-}
-function Sleep(){
-    if(SleepLevel<100){
-    SleepLevel++
-    document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel + "%"
-    }
-}
-function Feed(){
-    if(FoodLevel<100){
-    FoodLevel++
-    Weight++
-    document.getElementById("food").innerHTML="Food Level: " + FoodLevel + "%"
-    document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
-    }
-}
-function Play(){
-    if(HappinessLevel<100){
-   HappinessLevel++
-   document.getElementById("play").innerHTML="Happiness: " + HappinessLevel + "%"
-    }
-}
-function Excercise(){
-    if(Weight>1){
-    Weight--
-    document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
-    }
-}
-setInterval(function(){ 
-    if(Weight>1){
-    Weight--
-    }
-    if(FoodLevel>1){
-   FoodLevel--
-    }
-    if(SleepLevel>1){
-   SleepLevel--
-    }
-    if(HappinessLevel>1){
-   HappinessLevel--
-    }
-   document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
-   document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel + "%"
-   document.getElementById("food").innerHTML="Food Level: " + FoodLevel + "%"
-   document.getElementById("play").innerHTML="Happiness: " + HappinessLevel + "%"
-    
-}, 5000);
-
-document.getElementById("name").innerHTML="Name: " + PetName
-</script>
-<style>
-body{
- background-color: rgb(204, 217, 228);
-}
-.Button{
-  background-color: #070166be; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 30px;
-  margin-left: 100px;
-}
-.Button1{
+  <Body style="background-image: url('adeletreecoding.jpg');">
+  <button class="Button" onclick="Feed()">Feed</button>
+  <button class="Button1" onclick="Sleep()">Sleep</button>
+  <button class="Button2" onclick="Play()">Play</button>
+  <button class="Button3" onclick="Excercise()">Excercise</button>
+  <button class="Button4" onclick="AgeUp()">Age Up</button>
+  <button class="Button5" onclick ="Rename()">Rename</button>
+  <p class="Text"id="food"> Food:</p>
+  <p class="Text"id="sleep">Sleep:</p>
+  <p class="Text"id="play">Happiness:</p>
+  <p class="Text"id="excercise">Weight:</p>
+  <p class="Text"id="age">Age:</p>
+  <p class="bigText" id="name">Name:</p>
+  </Body>
+  </Html>
+  <script>
+  var PetName = prompt("What would you like to name your pet?")
+  var Weight = Math.floor(Math.random() * 13 + 1);
+  var Age = 0
+  var FoodLevel = 50
+  var SleepLevel=50
+  var HappinessLevel=50
+  var i = 0
+  function AgeUp(){
+  Age++
+  Weight++
+  document.getElementById("age").innerHTML="Age: " + Age + " year(s)"
+  document.getElementById("excercise").innerHTML="Weight: " + Weight  + " lbs"
+  }
+  function Sleep(){
+      if(SleepLevel<100){
+      SleepLevel++
+      document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel + "%"
+      }
+  }
+  function Feed(){
+      if(FoodLevel<100){
+      FoodLevel++
+      Weight++
+      document.getElementById("food").innerHTML="Food Level: " + FoodLevel + "%"
+      document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
+      }
+  }
+  function Play(){
+      if(HappinessLevel<100){
+     HappinessLevel++
+     document.getElementById("play").innerHTML="Happiness: " + HappinessLevel + "%"
+      }
+  }
+  function Excercise(){
+      if(Weight>1){
+      Weight--
+      document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
+      }
+      
+  }
+  function Rename(){
+        PetName = prompt("What would you like to name your pet?")
+        document.getElementById("name").innerHTML="Name: " + PetName 
+      }
+  setInterval(function(){ 
+      if(Weight>1){
+      Weight--
+      }
+      if(FoodLevel>1){
+     FoodLevel--
+      }
+      if(SleepLevel>1){
+     SleepLevel--
+      }
+      if(HappinessLevel>1){
+     HappinessLevel--
+      }
+     document.getElementById("excercise").innerHTML="Weight: " + Weight + " lbs"
+     document.getElementById("sleep").innerHTML= "Sleep: " + SleepLevel + "%"
+     document.getElementById("food").innerHTML="Food Level: " + FoodLevel + "%"
+     document.getElementById("play").innerHTML="Happiness: " + HappinessLevel + "%"
+      
+  }, 5000);
+  
+  document.getElementById("name").innerHTML="Name: " + PetName
+  </script>
+  <style>
+  body{
+   background-color: rgb(204, 217, 228);
+  }
+  .Button{
     background-color: #070166be; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 30px;
-  margin-left: 60px;
-}
-.Button2{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-left: 100px;
+  }
+  .Button1{
+      background-color: #070166be; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-left: 60px;
+  }
+  .Button2{
+      background-color: #070166be; 
+    border: none;
+    color: white;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-left: 20px;
+  }
+  .Button3{
+      background-color: #070166be; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 30px;
+    margin-right: 20px;
+  }
+  .Button4{
     background-color: #070166be; 
-  border: none;
-  color: white;
-  padding: 15px 35px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 30px;
-  margin-left: 20px;
-}
-.Button3{
-    background-color: #070166be; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  border-radius: 30px;
-  margin-right: 20px;
-}
-.Button4{
-  background-color: #070166be; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 30px;
-  margin-right: 60px;
-
-}
-.Button5{
-    background-color: #070166be; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 30px;
-  margin-right: 100px;
-}
-.Text{
-font-size: 30px;
-text-align:center;
-}
-.bigText{
-font-size:40px;
-text-align:center
-}
-</style>
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-right: 60px;
+  
+  }
+  .Button5{
+      background-color: #070166be; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-right: 100px;
+  }
+  .Text{
+  font-size: 30px;
+  text-align:center;
+  }
+  .bigText{
+  font-size:40px;
+  text-align:center
+  }
+  </style>
