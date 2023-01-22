@@ -1,0 +1,146 @@
+<html class = "back">
+    <body>
+   <p class = "computer" id = "computer">Computer:</p> 
+   <p class= "you" id = "you">You:</p> 
+<button class = "Rock" onclick = "Rock()">Rock</button>
+<button class = "Paper" onclick = "Paper()">Paper</button>
+<button class="Scissors" onclick = "Scissors()">Scissors</button>
+</body>
+</html>
+<script>
+    var YourChoice = 0
+    var ComputerChoice = 0
+
+    function Rock(){
+        YourChoice = "Rock"
+        document.getElementById("you").innerHTML="You: " + YourChoice;
+        Computer()
+        CalculateVictory()
+    }
+    function Paper(){
+        YourChoice = "Paper"
+        document.getElementById("you").innerHTML="You: " + YourChoice;
+        Computer()
+        CalculateVictory()
+    }
+    function Scissors(){
+        YourChoice = "Scissors"
+        document.getElementById("you").innerHTML="You: " + YourChoice;
+        Computer()
+        CalculateVictory()
+    }
+    function Computer(){
+        ComputerChoice = Math.floor(Math.random() * 3);
+        if(ComputerChoice == 0){
+ComputerChoice = "Rock"
+document.getElementById("computer").innerHTML="Computer: " + ComputerChoice; 
+        }
+        if(ComputerChoice == 1){
+ComputerChoice = "Paper"
+document.getElementById("computer").innerHTML="Computer: " + ComputerChoice; 
+        }
+        if(ComputerChoice == 2){
+ComputerChoice = "Scissors"
+document.getElementById("computer").innerHTML="Computer: " + ComputerChoice; 
+        }
+        
+    }
+    function CalculateVictory(){
+if(ComputerChoice == "Scissors" && YourChoice == "Rock"){
+    YouWin()
+}
+if(ComputerChoice == "Scissors" && YourChoice == "Scissors"){
+    Tie()
+}
+if(ComputerChoice == "Scissors" && YourChoice == "Paper"){
+    YouLose()
+}
+    if(ComputerChoice == "Rock" && YourChoice == "Rock"){
+    Tie()
+    }
+    if(ComputerChoice == "Rock" && YourChoice == "Paper"){
+    YouWin()
+}
+if(ComputerChoice == "Rock" && YourChoice == "Scissors"){
+    YouLose()
+}
+if(ComputerChoice == "Paper" && YourChoice == "Scissors"){
+    YouWin()
+}
+if(ComputerChoice == "Paper" && YourChoice == "Paper"){
+    Tie()
+}
+if(ComputerChoice == "Paper" && YourChoice == "Rock"){
+    YouLose()
+}
+
+    }
+     function YouLose(){
+setTimeout(() => {  alert("You lost this time! Try Again!"); }, 800);
+         
+     }    
+     function YouWin(){
+setTimeout(() => {  alert("You won! Great Job!"); }, 800);
+         
+     }    
+     function Tie(){
+setTimeout(() => {  alert("It's a tie! Play again!"); }, 800);
+         
+     }      
+        
+    
+    
+
+</script>
+<style>
+    .back{
+        background-color: #b3cbff;
+    }
+    .computer{
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        position: absolute;
+        top: 25%;
+        left: 45%;
+
+    }
+
+    .you{
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        position: absolute;
+        left: 45%;
+        top: 30%;
+    }
+
+    .Rock{
+background-color: #ffff66;
+text-align: Center;
+position: absolute;
+left: 42%;
+top: 40%;
+padding: 10px 15px;
+    }
+
+    .Paper{
+background-color: #80ff80;
+text-align: center;
+position: absolute;
+top: 40%;
+left: 47%;
+padding: 10px 15px;
+    }
+
+    .Scissors{
+background-color: #80aaff;
+text-align: center;
+position: absolute;
+left: 52%;
+top: 40%;
+padding: 10px 15px;
+    }
+
+
+</style>
